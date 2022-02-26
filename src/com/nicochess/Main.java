@@ -26,5 +26,8 @@ public class Main {
         int[] numbers = {2, 5, 7, 3};
         Arrays.sort(numbers);
         System.out.println(Arrays.toString(numbers));
+
+        int [][] matrix = new int[3][4];
+        System.out.println(Arrays.deepToString(matrix));
     }
 }
