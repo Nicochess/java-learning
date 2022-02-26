@@ -23,9 +23,8 @@ public class Main {
         Date now = new Date();
         System.out.println(now);
 
-        int[] numbers = new int[5];
-        numbers[0] = 3;
-        Arrays.toString(numbers);
-        System.out.println(numbers);
+        int[] numbers = {2, 5, 7, 3};
+        Arrays.sort(numbers);
+        System.out.println(Arrays.toString(numbers));
     }
 }
