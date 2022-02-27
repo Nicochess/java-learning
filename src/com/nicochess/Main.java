@@ -1,8 +1,10 @@
 package com.nicochess;
 
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
 
@@ -29,5 +31,22 @@ public class Main {
 
         int [][] matrix = new int[3][4];
         System.out.println(Arrays.deepToString(matrix));
+
+        final float PI = 3.14F;
+
+        int result =  3 + 7;
+        System.out.println(result);
+        
+        int random = (int) (Math.random() * 100);
+        System.out.println(random);
+
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String currencyResult = currency.format(2130.32);
+        System.out.println(currencyResult);
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("What's your name? ");
+        String username = scan.nextLine();
+        System.out.println("Nice to meet you " + username);
     }
 }
