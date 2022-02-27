@@ -1,5 +1,6 @@
 package com.nicochess;
 
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -15,16 +16,6 @@ public class Main {
         char letter = 'A';
         boolean isGreen = true;
 
-        String name = "Nicolas Magno";
-        System.out.println(name);
-        System.out.println(name.length());
-        System.out.println(name.endsWith("Magno"));
-        System.out.println(name.indexOf("o"));
-        System.out.println(name.replace("Magno", "Silva"));
-        System.out.println(name.toLowerCase());
-        Date now = new Date();
-        System.out.println(now);
-
         int[] numbers = {2, 5, 7, 3};
         Arrays.sort(numbers);
         System.out.println(Arrays.toString(numbers));
@@ -32,21 +23,22 @@ public class Main {
         int [][] matrix = new int[3][4];
         System.out.println(Arrays.deepToString(matrix));
 
-        final float PI = 3.14F;
-
-        int result =  3 + 7;
-        System.out.println(result);
-        
-        int random = (int) (Math.random() * 100);
-        System.out.println(random);
-
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         String currencyResult = currency.format(2130.32);
         System.out.println(currencyResult);
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("What's your name? ");
-        String username = scan.nextLine();
-        System.out.println("Nice to meet you " + username);
+        Scanner scanning = new Scanner(System.in);
+        DecimalFormat pattern = new DecimalFormat("#.##");
+
+        System.out.print("Qual sua altura? (m): ");
+        double height = scanning.nextDouble();
+
+        System.out.print("Qual seu peso? (Kg): ");
+        float weight = scanning.nextFloat();
+
+        double imc = weight / Math.pow(height, height);
+
+
+        System.out.println("O seu IMC é " + pattern.format(imc));
     }
 }
